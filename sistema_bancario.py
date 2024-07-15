@@ -1,3 +1,72 @@
+class Conta:
+    def __init__(self,saldo,numero,agencia,cliente,historico):
+        self._saldo = saldo
+        self._numero = numero
+        self._agencia = agencia
+        self._cliente = Cliente
+        self._historico = Historico
+
+    def saldo(self):
+        pass
+
+    def nova_conta(self,Cliente,numero):
+        pass
+
+    def sacar(self, valor):
+        pass
+
+    def depositar(self, valor):
+        pass
+
+class ContaCorrente(Conta):
+    def __init__(self, saldo, numero, agencia, cliente, historico,limite,limite_saques):
+        super().__init__(saldo, numero, agencia, cliente, historico)
+        self._limite = limite
+        self._limite_saques = limite_saques
+
+class Historico:
+    def adicionar_transacao(Transacao):
+        pass
+
+class Cliente:
+    def __init__(self,endereco,contas):
+        self._endereco = endereco
+        self._contas = contas
+
+    def realizar_transacao(self,Conta,Transacao):
+        pass
+
+    def adicionar_conta(Conta):
+        pass
+
+class PessoaFisica(Cliente):
+    def __init__(self,endereco,contas,cpf,nome,data_nascimento):
+        super().__init__(endereco,contas)
+        self._cpf = cpf
+        self._nome = nome
+        self._data_nascimento = data_nascimento
+
+class Transacao:
+    def registrar(self,Conta):
+        pass
+
+class Deposito(Transacao):
+    def __init__(self,valor):
+        self._valor = valor
+
+class Saque(Transacao):
+    def __init__(self,valor):
+        self._valor = valor
+
+
+
+
+
+
+
+
+
+###############################################################################################################################################
 LIMITE_NUMERO_SAQUE = 3
 LIMITE_VALOR_SAQUE = 500.00
 contador_saque = 0
